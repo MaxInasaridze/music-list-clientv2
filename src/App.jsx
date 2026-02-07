@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
-import AddMusic from "./pages/AddMusic";
 import Landing from "./pages/Landing";
+import AddMusic from "./pages/AddMusic";
 import NavBar from "./components/NavBar";
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
     <BrowserRouter>
       <div>
         <NavBar />
-        <div>
-          <div>
+        <div className="flex justify-center">
+          <div className="w-full max-w-[1100px] px-4 py-6 sm:px-6 lg:px-8">
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/about" element={<About />} />
@@ -23,5 +23,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
- 
+
 export default App;
